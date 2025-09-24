@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV != "production") {
+    require("dotenv").config();
+}
+
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
@@ -46,10 +50,6 @@ main()
 async function main() {
     await mongoose.connect(MONGO_URL);
 }
-
-app.get("/", (req, res) => {
-    res.send("Hi, I am root");
-});
 
 app.use(session(sessionOptions));
 app.use(flash());
