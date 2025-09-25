@@ -7,6 +7,7 @@
     gap: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    position: relative;
   }
   .filter {
     text-align: center;
@@ -43,6 +44,54 @@
   a {
     text-decoration: none;
     color: black;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #filters {
+      gap: 1rem;
+      padding: 0.5rem;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      margin-top: 2rem;
+    }
+
+    #filters::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    .filter {
+      min-width: 60px;
+      flex-shrink: 0;
+    }
+
+    .tax-toggle {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      margin-left: 0;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .filter p {
+      font-size: 0.7rem;
+    }
+
+    .filter i {
+      font-size: 1.2rem;
+    }
+
+    .tax-toggle {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
   }
 </style>
 
