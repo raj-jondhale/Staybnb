@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "22.16.0"
+  },
   "name": "staybnb",
   "version": "1.0.0",
   "description": "��#\u0000 \u0000S\u0000t\u0000a\u0000y\u0000b\u0000n\u0000b\u0000\r\u0000 \u0000",
@@ -20,6 +23,7 @@
   "dependencies": {
     "cloudinary": "^1.21.0",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.2",
     "ejs": "^3.1.10",
